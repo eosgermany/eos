@@ -38,6 +38,13 @@
 			   exit 1
 		   fi
 		;;
+		"Debian")
+			if [ "${OS_MAJ}" -lt 9 ]; then
+				printf "\\tYou must be running Debian 9 or higher to install EOSIO.\\n"
+				printf "\\tExiting now.\\n"
+				exit 1
+			fi
+		;;
 		"Ubuntu")
 			if [ "${OS_MAJ}" -lt 16 ]; then
 				printf "\\tYou must be running Ubuntu 16.04.x or higher to install EOSIO.\\n"
